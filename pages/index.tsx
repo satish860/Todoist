@@ -1,86 +1,164 @@
-import type { NextPage } from 'next'
-import Head from 'next/head'
-import Image from 'next/image'
+import type { NextPage } from "next";
+import Head from "next/head";
+import Image from "next/image";
+import { FcGoogle } from "react-icons/fc";
+import { FaApple } from "react-icons/fa";
+import { SiFacebook } from "react-icons/si";
 
 const Home: NextPage = () => {
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center py-2">
+    <div className="flex px-4 mx-auto flex-col max-w-4xl py-4">
       <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>Log in to Todoist</title>
+        <link rel="icon" href="/icon.png" />
       </Head>
+      <div className="flex items-center">
+        <Image src="/icon.png" width={40} height={40} />
+        <h1 className="px-2 text-red-500 font-bold text-2xl">todoist</h1>
+      </div>
+      <div className="flex">
+        <div className="flex flex-col my-28">
+          <h1 className="text-4xl font-bold">Log in</h1>
+          <div className="flex flex-col mt-6">
+            <button className="mt-4 bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border w-96 border-gray-400 rounded shadow">
+              <div className="flex items-center justify-center ">
+                <FcGoogle />
+                <span className="mx-2 font-bold text-lg">
+                  Continue with Google
+                </span>
+              </div>
+            </button>
+            <button className="mt-4 bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border w-96 border-gray-400 rounded shadow">
+              <div className="flex items-center justify-center ">
+                <SiFacebook />
+                <span className="mx-2 font-bold text-lg">
+                  Continue with Facebook
+                </span>
+              </div>
+            </button>
+            <button className="mt-4 bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border w-96 border-gray-400 rounded shadow">
+              <div className="flex items-center justify-center ">
+                <FaApple />
+                <span className="mx-2 font-bold text-lg">
+                  Continue with Apple
+                </span>
+              </div>
+            </button>
+          </div>
+          <hr className="mt-4 w-96  border-black" />
 
-      <main className="flex w-full flex-1 flex-col items-center justify-center px-20 text-center">
-        <h1 className="text-6xl font-bold">
-          Welcome to{' '}
-          <a className="text-blue-600" href="https://nextjs.org">
-            Next.js!
-          </a>
-        </h1>
-
-        <p className="mt-3 text-2xl">
-          Get started by editing{' '}
-          <code className="rounded-md bg-gray-100 p-3 font-mono text-lg">
-            pages/index.tsx
-          </code>
-        </p>
-
-        <div className="mt-6 flex max-w-4xl flex-wrap items-center justify-around sm:w-full">
-          <a
-            href="https://nextjs.org/docs"
-            className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Documentation &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Find in-depth information about Next.js features and its API.
-            </p>
-          </a>
-
-          <a
-            href="https://nextjs.org/learn"
-            className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Learn &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Learn about Next.js in an interactive course with quizzes!
-            </p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/canary/examples"
-            className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Examples &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Discover and deploy boilerplate example Next.js projects.
-            </p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Deploy &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+          <div className="flex mt-4 w-96">
+            <div>
+              <div
+                className="form-floating mb-5 w-96 border border-solid border-gray-300
+      rounded
+      transition
+      ease-in-out"
+              >
+                <label className="text-gray-700 mx-2 text-xs ">Email</label>
+                <input
+                  type="email"
+                  className="form-control
+      block
+      w-full
+      px-3
+      py-1.5
+      text-base
+      font-normal
+      outline-none
+      text-gray-700
+      bg-white bg-clip-padding
+      rounded
+      transition
+      ease-in-out
+      m-0
+      focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+                  id="floatingInput"
+                  placeholder="Enter your Email Address"
+                />
+              </div>
+              <div
+                className="form-floating mb-5 xl:w-96 border border-solid border-gray-300
+      rounded
+      transition
+      ease-in-out"
+              >
+                <label className="text-gray-700 mx-2 text-xs">Password</label>
+                <input
+                  type="password"
+                  className="form-control
+      block
+      w-full
+      px-3
+      py-1.5
+      text-base
+      font-normal
+      text-gray-700
+      bg-white bg-clip-padding
+      rounded
+      transition
+      ease-in-out
+      m-0
+      focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+                  id="floatingPassword"
+                  placeholder="Password"
+                />
+              </div>
+              <button
+                className="w-full 
+            h-12
+            bg-[#db4c3f] 
+            rounded-lg
+            hover:bg:[#c53727]
+            px-4
+            py-2
+            text-xl
+            font-bold
+            text-white"
+              >
+                Log in
+              </button>
+              <div className="mt-4">
+                <a
+                  href="/auth.password"
+                  className="text-gray-700 
+            text-xs underline
+            "
+                >
+                  Forgot your password?
+                </a>
+              </div>
+              <div className="mt-4">
+                <p className="text-gray-700 text-xs">
+                  By continuing with Google, Apple, or Email, you agree to
+                  Todoist’s
+                  <span className="underline mx-1">Terms of Service</span>
+                  and <span className="underline">Privacy Policy.</span>
+                </p>
+              </div>
+              <div className="flex items-center justify-center mt-6">
+                <p className="text-gray-700 text-sm">
+                  Don't have an account?{" "}
+                  <a className="underline" href="/auth.signup">
+                    Sign up
+                  </a>
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
-      </main>
-
-      <footer className="flex h-24 w-full items-center justify-center border-t">
-        <a
-          className="flex items-center justify-center gap-2"
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-        </a>
-      </footer>
+        <div className="flex items-center mx-10">
+          <Image
+            src="/image.png"
+            className=""
+            width={500}
+            height={500}
+            objectFit="contain"
+          />
+        </div>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
